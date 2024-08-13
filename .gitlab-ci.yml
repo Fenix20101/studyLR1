@@ -1,6 +1,10 @@
-gunicorn --bind 127.0.0.1:5000 wsgi:app & APP_PID=$!
-sleep 5
-echo $APP_PID
-kill -TERM $APP_PID
-echo process gunicorns kills
-exit 0
+language: python
+before_install:
+ - chmod +x ./flaskapp/st.sh
+install:
+ - pip3 install flask
+73
+ - pip3 install gunicorn
+script:
+ - cd flaskapp
+ - ./st.sh 
