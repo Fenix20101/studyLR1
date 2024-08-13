@@ -58,3 +58,5 @@ def getresult(image_box):
 # возможно, лучше убрать и закомментировать эти строки
 # fcount, fimage = read_image_files(1,'./static')
 # decode = getresult(fimage) 
+app.config['RECAPTCHA_PUBLIC_KEY'] = '6LfBAyYqAAAAACmqJv6O2Msh8rj-FkhoSnK1I-eH'
+app.config['RECAPTCHA_PRIVATE_KEY'] = '6LfBAyYqAAAAAIXmHJ-cg-iAaU3v4JilW251IYT0'
